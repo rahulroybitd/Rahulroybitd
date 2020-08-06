@@ -1,0 +1,36 @@
+1xx: Informational	Communicates transfer protocol-level information.
+2xx: Success	Indicates that the client’s request was accepted successfully.
+3xx: Redirection	Indicates that the client must take some additional action in order to complete their request.
+4xx: Client Error	This category of error status codes points the finger at clients.
+5xx: Server Error	The server takes responsibility for these error status codes.
+
+HTTP Codes
+Put success: 200,
+Push success: 201,
+Put and delete success: 204
+Code	Meaning
+200	Everything worked fine -When using get method
+201	When resource is created inside a collection- post mthod
+202 	When request has been accepted for processing- Post method
+204 	When the REST API declines to send back any status message-PUT, POST and DELETE	
+
+301	When API moved permanently 
+302	Found is a common way of performing URL redirection.
+303	controller resource has finished its work, but instead of sending a potentially unwanted response body, it sends the client the URI of a response resource.
+304	when the resource has not been modified, no need to retransmit the resource
+307	Temporary redirected.
+
+400 	Bad Request(Errors can be like malformed request syntax, invalid request message parameters)
+401	Unauthorized( tried to operate on a protected resource without providing the proper authorization.)
+403	User does not have the necessary permissions for the resource
+404	Not found( REST API can’t map the client’s URI)
+405	Method not allowed
+422	A validation error had occurred
+429	Rate limit exceeded, or you are not hitting the correct url. Please refer to the error message that came with the code.
+500	An internal server error has occurred, this is probably not your fault.
+
+
+
+
+
+GET /api/v3/people.json?api_key=abcd1234&attrs=id,last_name
